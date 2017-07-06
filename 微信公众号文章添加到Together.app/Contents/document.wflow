@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AMApplicationBuild</key>
+	<string>428</string>
+	<key>AMApplicationVersion</key>
+	<string>2.7</string>
+	<key>AMDocumentVersion</key>
+	<string>2</string>
+	<key>actions</key>
+	<array>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.attributed-string</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.2.1</string>
+				<key>AMApplication</key>
+				<array>
+					<string>系统</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict/>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.cocoa.attributed-string</string>
+					</array>
+				</dict>
+				<key>AMRequiredResources</key>
+				<array/>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Get Contents of Clipboard.action</string>
+				<key>ActionName</key>
+				<string>获取剪贴板的内容</string>
+				<key>ActionParameters</key>
+				<dict/>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.Get_Contents_of_Clipboard</string>
+				<key>CFBundleVersion</key>
+				<string>1.2.1</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<true/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>AMGetContentsOfClipboardAction</string>
+				<key>InputUUID</key>
+				<string>5003DA07-45F0-447C-871B-AB6A9ABA7475</string>
+				<key>Keywords</key>
+				<array/>
+				<key>OutputUUID</key>
+				<string>6EA4B386-1E06-452B-93B5-0EAE267A4997</string>
+				<key>UUID</key>
+				<string>B64F81C9-6712-4A7B-B2FC-DE1AF3629ED2</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>System</string>
+				</array>
+				<key>arguments</key>
+				<dict/>
+			</dict>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>运行 AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>on run {input, parameters}	tell application "/Applications/Microsoft Word.app"		create new document		paste special (text object of selection)		run VB macro macro name "调整"		set theActiveDoc to the active document		select sentence 1 of theActiveDoc		set title to content of text object of selection		set filename to "/Users/Adam/Documents/办公用/金融科技专题/" &amp; title &amp; ".pdf"		save as theActiveDoc file format format PDF file name filename		close theActiveDoc saving no	end tell	return filenameend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>AA2FA63E-9415-43EA-AC1E-D64E497EB818</string>
+				<key>Keywords</key>
+				<array>
+					<string>运行</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>2E0745F6-B55B-4551-B07A-8C96836B972E</string>
+				<key>UUID</key>
+				<string>CA554AB5-E3F2-4909-A0E0-32DE217CB000</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>471.000000:382.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>action</key>
+			<dict>
+				<key>AMAccepts</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Optional</key>
+					<true/>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>AMActionVersion</key>
+				<string>1.0.2</string>
+				<key>AMApplication</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>AMParameterProperties</key>
+				<dict>
+					<key>source</key>
+					<dict/>
+				</dict>
+				<key>AMProvides</key>
+				<dict>
+					<key>Container</key>
+					<string>List</string>
+					<key>Types</key>
+					<array>
+						<string>com.apple.applescript.object</string>
+					</array>
+				</dict>
+				<key>ActionBundlePath</key>
+				<string>/System/Library/Automator/Run AppleScript.action</string>
+				<key>ActionName</key>
+				<string>运行 AppleScript</string>
+				<key>ActionParameters</key>
+				<dict>
+					<key>source</key>
+					<string>on run {input, parameters}		tell application "/Applications/Together 3.app"		import files input	end tellend run</string>
+				</dict>
+				<key>BundleIdentifier</key>
+				<string>com.apple.Automator.RunScript</string>
+				<key>CFBundleVersion</key>
+				<string>1.0.2</string>
+				<key>CanShowSelectedItemsWhenRun</key>
+				<false/>
+				<key>CanShowWhenRun</key>
+				<true/>
+				<key>Category</key>
+				<array>
+					<string>AMCategoryUtilities</string>
+				</array>
+				<key>Class Name</key>
+				<string>RunScriptAction</string>
+				<key>InputUUID</key>
+				<string>20DE4E87-AFA1-498F-8BC6-4101C48BFD95</string>
+				<key>Keywords</key>
+				<array>
+					<string>运行</string>
+				</array>
+				<key>OutputUUID</key>
+				<string>31461FB9-B2F0-4FFE-B078-AF48846526F5</string>
+				<key>UUID</key>
+				<string>84A62D66-D12A-4EB2-A82B-49B0984EC4C5</string>
+				<key>UnlocalizedApplications</key>
+				<array>
+					<string>Automator</string>
+				</array>
+				<key>arguments</key>
+				<dict>
+					<key>0</key>
+					<dict>
+						<key>default value</key>
+						<string>on run {input, parameters}
+	
+	(* Your script goes here *)
+	
+	return input
+end run</string>
+						<key>name</key>
+						<string>source</string>
+						<key>required</key>
+						<string>0</string>
+						<key>type</key>
+						<string>0</string>
+						<key>uuid</key>
+						<string>0</string>
+					</dict>
+				</dict>
+				<key>isViewVisible</key>
+				<true/>
+				<key>location</key>
+				<string>471.000000:628.000000</string>
+				<key>nibPath</key>
+				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/Base.lproj/main.nib</string>
+			</dict>
+			<key>isViewVisible</key>
+			<true/>
+		</dict>
+	</array>
+	<key>connectors</key>
+	<dict>
+		<key>19FC8CFA-D412-4CF1-8D5F-C2387A064517</key>
+		<dict>
+			<key>from</key>
+			<string>CA554AB5-E3F2-4909-A0E0-32DE217CB000 - CA554AB5-E3F2-4909-A0E0-32DE217CB000</string>
+			<key>to</key>
+			<string>84A62D66-D12A-4EB2-A82B-49B0984EC4C5 - 84A62D66-D12A-4EB2-A82B-49B0984EC4C5</string>
+		</dict>
+		<key>EE8D21A8-F7E9-4585-A131-6A46A140E2A4</key>
+		<dict>
+			<key>from</key>
+			<string>B64F81C9-6712-4A7B-B2FC-DE1AF3629ED2 - B64F81C9-6712-4A7B-B2FC-DE1AF3629ED2</string>
+			<key>to</key>
+			<string>CA554AB5-E3F2-4909-A0E0-32DE217CB000 - CA554AB5-E3F2-4909-A0E0-32DE217CB000</string>
+		</dict>
+	</dict>
+	<key>workflowMetaData</key>
+	<dict>
+		<key>workflowTypeIdentifier</key>
+		<string>com.apple.Automator.application</string>
+	</dict>
+</dict>
+</plist>
